@@ -16,12 +16,10 @@ public class Single extends JavaPlugin implements Listener {
     }
 
     public void onEnable() {
-        this.getLogger().config("  ");
-        this.getLogger().config("  Single Loaded.");
-        this.getLogger().config("  Dev: Lincey"); //You can add ur name if u took part in writing this :P
-        this.getLogger().config("  Is private: True");
-        this.getLogger().config("  ");
-
+        Logger.getLogger("  ");
+        Logger.getLogger("  Single Loaded.");
+        Logger.getLogger("  Dev: Lincey");
+        Logger.getLogger("  ");
         new Heal(this);
         new FHeal(this);
         new GMC(this);
@@ -30,11 +28,7 @@ public class Single extends JavaPlugin implements Listener {
     }
 
     public void onDisable() {
-        this.getLogger().config("  ");
-        this.getLogger().config("  Single De-Loaded.");
-        this.getLogger().config("  Dev: Lincey"); //You can add ur name if u took part in writing this :P
-        this.getLogger().config("  Is private: True");
-        this.getLogger().config("  ");
+
     }
 
 
