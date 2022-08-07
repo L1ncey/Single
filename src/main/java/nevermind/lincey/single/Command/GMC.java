@@ -33,6 +33,9 @@ public class GMC implements CommandExecutor{
                     ps.sendMessage(ChatColor.AQUA + "Usage: /gmc [target]");
                 }
 
+            } else {
+                ps.sendMessage(ChatColor.WHITE + "Unknown command.");
+                return true;
             }
 
         }

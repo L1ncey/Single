@@ -32,6 +32,7 @@ public class Heal implements CommandExecutor {
                 };
             } else {
                 ps.sendMessage(ChatColor.WHITE + "Unknown command.");
+                return true;
             }
         }
         return true;
