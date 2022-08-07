@@ -2,6 +2,8 @@ package nevermind.lincey.single;
 
 
 import nevermind.lincey.single.Command.FHeal;
+import nevermind.lincey.single.Command.GMC;
+import nevermind.lincey.single.Command.GMS;
 import nevermind.lincey.single.Command.Heal;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -22,6 +24,8 @@ public class Single extends JavaPlugin implements Listener {
 
         new Heal(this);
         new FHeal(this);
+        new GMC(this);
+        new GMS(this);
 
     }
 
