@@ -18,7 +18,13 @@ public class HiCommand implements CommandExecutor{
 
 
 
-    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        return false;
+    public boolean onCommand(CommandSender sender, Command command, String s, String[] strings) {
+        if (!(sender instanceof Player)) {
+            return true;
+        } else {
+            Player ps = (Player) sender;
+            ps.sendMessage("Hi~");
+            return true;
+        }
     }
 }

@@ -12,7 +12,6 @@ import org.bukkit.ChatColor;
 public class GamemodeCommandC implements CommandExecutor{
 
     public GamemodeCommandC() {
-
         Bukkit.getPluginCommand("gmc").setExecutor(this);
     }
 

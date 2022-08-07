@@ -1,11 +1,9 @@
 package nevermind.lincey.single;
 
 
-import nevermind.lincey.single.Command.FoodHealCommand;
-import nevermind.lincey.single.Command.GamemodeCommandC;
-import nevermind.lincey.single.Command.GamemodeCommandS;
-import nevermind.lincey.single.Command.HealCommand;
+import nevermind.lincey.single.Command.*;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
@@ -16,22 +14,23 @@ public class Single extends JavaPlugin {
     }
 
     public void onEnable() {
-        Logger.getLogger("  ");
-        Logger.getLogger("  Single Loaded.");
-        Logger.getLogger("  Dev: Lincey");
-        Logger.getLogger("  ");
+        Bukkit.getLogger().info("  ");
+        Bukkit.getLogger().info("  Single Loaded.");
+        Bukkit.getLogger().info("  Dev: Lincey");
+        Bukkit.getLogger().info("  ");
         new HealCommand();
         new FoodHealCommand();
         new GamemodeCommandC();
         new GamemodeCommandS();
+        new HiCommand();
 
     }
 
     public void onDisable() {
-        Logger.getLogger("  ");
-        Logger.getLogger("  Single De-Loaded.");
-        Logger.getLogger("  Dev: Lincey");
-        Logger.getLogger("  ");
+        Bukkit.getLogger().info("  ");
+        Bukkit.getLogger().info("  Single De-Loaded.");
+        Bukkit.getLogger().info("  Dev: Lincey");
+        Bukkit.getLogger().info("  ");
     }
 
 

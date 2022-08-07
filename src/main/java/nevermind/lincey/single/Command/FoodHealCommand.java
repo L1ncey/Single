@@ -12,7 +12,6 @@ import org.bukkit.ChatColor;
 public class FoodHealCommand implements CommandExecutor {
 
     public FoodHealCommand() {
-
         Bukkit.getPluginCommand("fheal").setExecutor(this);
     }
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {

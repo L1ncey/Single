@@ -11,11 +11,11 @@ import org.bukkit.ChatColor;
 public class HealCommand implements CommandExecutor {
 
     public HealCommand() {
-
         Bukkit.getPluginCommand("heal").setExecutor(this);
     }
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {
+            Bukkit.getLogger().info("This command is for player only.");
             return true;
         } else {
             Player ps = (Player) sender;
