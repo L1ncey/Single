@@ -10,7 +10,9 @@ import org.bukkit.ChatColor;
 
 
 public class FHeal implements CommandExecutor {
+    private Single single;
     public FHeal(Single single) {
+        this.single = single;
         Bukkit.getPluginCommand("fheal").setExecutor(this);
     }
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
@@ -22,28 +24,28 @@ public class FHeal implements CommandExecutor {
                 if (args.length == 0) {
                     ps.setFoodLevel(20);
                     ps.sendMessage(ChatColor.AQUA + "Food-Healed " + ChatColor.YELLOW  + ps + ChatColor.AQUA  + " .");
-                    return true;
+
                 } else if (args.length == 1) {
                     Player pr = Bukkit.getPlayer(args[0]);
                     boolean po = pr.isOnline();
                     if(po){
                         pr.setFoodLevel(20);
                         ps.sendMessage(ChatColor.AQUA + "Food-Healed " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " .");
-                        return true;
+
                     } else {
                         ps.sendMessage(ChatColor.AQUA + "Target not found.");
-                        return true;
+
                     }
                 } else {
                     ps.sendMessage(ChatColor.AQUA + "Usage: /fheal [target]");
+
                 }
             } else {
                 ps.sendMessage(ChatColor.WHITE + "Unknown command.");
-                return true;
+
             }
 
         }
-
 
         return true;
     }

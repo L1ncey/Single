@@ -10,7 +10,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.ChatColor;
 
 public class GMS implements CommandExecutor{
+    private Single single;
     public GMS(Single single) {
+        this.single = single;
         Bukkit.getPluginCommand("gms").setExecutor(this);
     }
 
@@ -23,29 +25,29 @@ public class GMS implements CommandExecutor{
                 if (args.length == 0) {
                     ps.setGameMode(GameMode.SURVIVAL);
                     ps.sendMessage(ChatColor.AQUA + "Set " + ChatColor.YELLOW  +  ps + ChatColor.AQUA + " Game_mode_SURVIVAL .");
-                    return true;
+
                 } else if (args.length == 1) {
                     Player pr = Bukkit.getPlayer(args[0]);
                     boolean po = pr.isOnline();
                     if (po) {
                         pr.setGameMode(GameMode.SURVIVAL);
                         ps.sendMessage(ChatColor.AQUA + "Set " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " Game_mode_SURVIVAL .");
-                        return true;
+
                     } else {
                         ps.sendMessage(ChatColor.AQUA + "Target not found.");
-                        return true;
+
                     }
                 } else {
                     ps.sendMessage(ChatColor.AQUA + "Usage: /gmc [target]");
+
                 }
 
             } else {
                 ps.sendMessage(ChatColor.WHITE + "Unknown command.");
-                return true;
+
             }
 
         }
-
         return true;
     }
 }

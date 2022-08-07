@@ -9,7 +9,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.ChatColor;
 
 public class Heal implements CommandExecutor {
+    private Single single;
     public Heal(Single single) {
+        this.single = single;
         Bukkit.getPluginCommand("heal").setExecutor(this);
     }
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -21,24 +23,25 @@ public class Heal implements CommandExecutor {
                 if (args.length == 0) {
                     ps.setHealth(ps.getMaxHealth());
                     ps.sendMessage(ChatColor.AQUA + "Healed " + ChatColor.YELLOW  + ps + ChatColor.AQUA  + " .");
-                    return true;
+
                 } else if (args.length == 1) {
                     Player pr = Bukkit.getPlayer(args[0]);
                     boolean po = pr.isOnline();
                     if(po){
                         pr.setHealth(ps.getMaxHealth());
                         ps.sendMessage(ChatColor.AQUA + "Healed " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " .");
-                        return true;
+
                     } else {
                         ps.sendMessage(ChatColor.AQUA + "Target not found.");
-                        return true;
+
                     }
                 }else {
                     ps.sendMessage(ChatColor.AQUA + "Usage: /heal [target]" );
+
                 }
             } else {
                 ps.sendMessage(ChatColor.WHITE + "Unknown command.");
-                return true;
+
             }
         }
         return true;
