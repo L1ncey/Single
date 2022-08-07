@@ -1,0 +1,5 @@
+name: Single
+version: ${git.commit.id.abbrev}
+author: Lincey
+main: nevermind.lincey.single
+softdepend: [ Core ]
