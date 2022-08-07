@@ -23,7 +23,7 @@ public class Single extends JavaPlugin {
         new GamemodeCommandC();
         new GamemodeCommandS();
         new HiCommand();
-
+        new FlyCommand();
     }
 
     public void onDisable() {
