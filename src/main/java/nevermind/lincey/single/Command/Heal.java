@@ -10,7 +10,7 @@ import org.bukkit.ChatColor;
 
 public class Heal implements CommandExecutor {
     public Heal(Single single) {
-        Bukkit.getPluginCommand("heal").setExecutor((CommandExecutor) this);
+        Bukkit.getPluginCommand("heal").setExecutor(this);
     }
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {
@@ -35,7 +35,7 @@ public class Heal implements CommandExecutor {
                     }
                 }else {
                     ps.sendMessage(ChatColor.AQUA + "Usage: /heal [target]" );
-                };
+                }
             } else {
                 ps.sendMessage(ChatColor.WHITE + "Unknown command.");
                 return true;

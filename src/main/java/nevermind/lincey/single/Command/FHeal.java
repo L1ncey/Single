@@ -11,7 +11,7 @@ import org.bukkit.ChatColor;
 
 public class FHeal implements CommandExecutor {
     public FHeal(Single single) {
-        Bukkit.getPluginCommand("fheal").setExecutor((CommandExecutor) this);
+        Bukkit.getPluginCommand("fheal").setExecutor(this);
     }
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
         if (!(sender instanceof Player)) {

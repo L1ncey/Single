@@ -11,7 +11,7 @@ import org.bukkit.ChatColor;
 
 public class GMS implements CommandExecutor{
     public GMS(Single single) {
-        Bukkit.getPluginCommand("gms").setExecutor((CommandExecutor) this);
+        Bukkit.getPluginCommand("gms").setExecutor(this);
     }
 
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
