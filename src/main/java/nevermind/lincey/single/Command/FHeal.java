@@ -21,12 +21,12 @@ public class FHeal implements CommandExecutor {
             if (ps.hasPermission("single.fheal")) {
                 if (args.length == 0) {
                     ps.setFoodLevel(20);
-                    ps.sendMessage(ChatColor.AQUA + "Food-Healed " + ps + " .");
+                    ps.sendMessage(ChatColor.AQUA + "Food-Healed " + ChatColor.YELLOW  + ps + ChatColor.AQUA  + " .");
                     return true;
                 } else if (args.length == 1) {
                     Player pr = Bukkit.getPlayer(args[0]);
                     pr.setFoodLevel(20);
-                    ps.sendMessage(ChatColor.AQUA + "Food-Healed " + pr + " .");
+                    ps.sendMessage(ChatColor.AQUA + "Food-Healed " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " .");
                     return true;
                 } else {
                     ps.sendMessage(ChatColor.AQUA + "Usage: /fheal [target]");

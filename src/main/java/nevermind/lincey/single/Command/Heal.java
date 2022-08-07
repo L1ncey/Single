@@ -20,12 +20,12 @@ public class Heal implements CommandExecutor {
             if (ps.hasPermission("single.heal")) {
                 if (args.length == 0) {
                     ps.setHealth(ps.getMaxHealth());
-                    ps.sendMessage(ChatColor.AQUA + "Healed " + ps + " .");
+                    ps.sendMessage(ChatColor.AQUA + "Healed " + ChatColor.YELLOW  + ps + ChatColor.AQUA  + " .");
                     return true;
                 } else if (args.length == 1) {
                     Player pr = Bukkit.getPlayer(args[0]);
                     pr.setHealth(ps.getMaxHealth());
-                    ps.sendMessage(ChatColor.AQUA + "Healed " + pr + " .");
+                    ps.sendMessage(ChatColor.AQUA + "Healed " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " .");
                     return true;
                 }else {
                     ps.sendMessage(ChatColor.AQUA + "Usage: /heal [target]" );
