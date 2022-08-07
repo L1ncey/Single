@@ -26,9 +26,15 @@ public class GMC implements CommandExecutor{
                     return true;
                 } else if (args.length == 1) {
                     Player pr = Bukkit.getPlayer(args[0]);
-                    pr.setGameMode(GameMode.CREATIVE);
-                    ps.sendMessage(ChatColor.AQUA + "Set " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " Game_mode_CREATIVE .");
-                    return true;
+                    boolean po = pr.isOnline();
+                    if(po){
+                        pr.setGameMode(GameMode.CREATIVE);
+                        ps.sendMessage(ChatColor.AQUA + "Set " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " Game_mode_CREATIVE .");
+                        return true;
+                    } else {
+                        ps.sendMessage(ChatColor.AQUA + "Target not found.");
+                        return true;
+                    }
                 } else {
                     ps.sendMessage(ChatColor.AQUA + "Usage: /gmc [target]");
                 }

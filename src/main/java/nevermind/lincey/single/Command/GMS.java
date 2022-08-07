@@ -27,10 +27,14 @@ public class GMS implements CommandExecutor{
                 } else if (args.length == 1) {
                     Player pr = Bukkit.getPlayer(args[0]);
                     boolean po = pr.isOnline();
-                    if (!po) //如果玩家不在线 输出.....
-                    pr.setGameMode(GameMode.SURVIVAL);
-                    ps.sendMessage(ChatColor.AQUA + "Set " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " Game_mode_SURVIVAL .");
-                    return true;
+                    if (po) {
+                        pr.setGameMode(GameMode.SURVIVAL);
+                        ps.sendMessage(ChatColor.AQUA + "Set " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " Game_mode_SURVIVAL .");
+                        return true;
+                    } else {
+                        ps.sendMessage(ChatColor.AQUA + "Target not found.");
+                        return true;
+                    }
                 } else {
                     ps.sendMessage(ChatColor.AQUA + "Usage: /gmc [target]");
                 }

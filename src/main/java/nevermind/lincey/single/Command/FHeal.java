@@ -25,9 +25,15 @@ public class FHeal implements CommandExecutor {
                     return true;
                 } else if (args.length == 1) {
                     Player pr = Bukkit.getPlayer(args[0]);
-                    pr.setFoodLevel(20);
-                    ps.sendMessage(ChatColor.AQUA + "Food-Healed " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " .");
-                    return true;
+                    boolean po = pr.isOnline();
+                    if(po){
+                        pr.setFoodLevel(20);
+                        ps.sendMessage(ChatColor.AQUA + "Food-Healed " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " .");
+                        return true;
+                    } else {
+                        ps.sendMessage(ChatColor.AQUA + "Target not found.");
+                        return true;
+                    }
                 } else {
                     ps.sendMessage(ChatColor.AQUA + "Usage: /fheal [target]");
                 }
