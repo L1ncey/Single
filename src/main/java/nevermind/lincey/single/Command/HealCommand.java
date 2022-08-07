@@ -15,7 +15,7 @@ public class HealCommand implements CommandExecutor {
     }
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            Bukkit.getLogger().info("This command is for player only.");
+            Bukkit.getLogger().info("This command is for players only.");
             return true;
         } else {
             Player ps = (Player) sender;

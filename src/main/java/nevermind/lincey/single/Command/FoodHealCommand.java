@@ -16,6 +16,7 @@ public class FoodHealCommand implements CommandExecutor {
     }
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
         if (!(sender instanceof Player)) {
+            Bukkit.getLogger().info("This command is for players only.");
             return true;
         } else {
             Player ps = (Player) sender;

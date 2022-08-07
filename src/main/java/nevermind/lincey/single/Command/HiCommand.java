@@ -20,6 +20,7 @@ public class HiCommand implements CommandExecutor{
 
     public boolean onCommand(CommandSender sender, Command command, String s, String[] strings) {
         if (!(sender instanceof Player)) {
+            Bukkit.getLogger().info("Hi~");
             return true;
         } else {
             Player ps = (Player) sender;
