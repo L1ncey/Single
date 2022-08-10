@@ -22,28 +22,17 @@ public class FlyCommand implements CommandExecutor {
         } else {
             Player ps = (Player) sender;
             if (ps.hasPermission("single.fly")) {
-                if (args.length == 0) {
+                if(!ps.getAllowFlight()){
                     ps.setAllowFlight(true);
-                    ps.sendMessage(ChatColor.AQUA + "Fly-Enabled " + ChatColor.YELLOW  + ps + ChatColor.AQUA  + " .");
-
-                } else if (args.length == 1) {
-                    Player pr = Bukkit.getPlayer(args[0]);
-                    boolean po = pr.isOnline();
-                    if(po){
-                        ps.setAllowFlight(true);
-                        ps.sendMessage(ChatColor.AQUA + "Fly-Enabled " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " .");
-
-                    } else {
-                        ps.sendMessage(ChatColor.AQUA + "Target not found.");
-
-                    }
-                } else {
-                    ps.sendMessage(ChatColor.AQUA + "Usage: /fly [target]");
-
+                    ps.sendMessage(ChatColor.AQUA + "Fly-Enabled " + ChatColor.YELLOW  + ps.getName() + ChatColor.AQUA  + " .");
+                } else if (ps.getAllowFlight()) {
+                    ps.setAllowFlight(false);
+                    ps.sendMessage(ChatColor.AQUA + "Fly-Disabled " + ChatColor.YELLOW  + ps.getName() + ChatColor.AQUA  + " .");
                 }
+
+
             } else {
                 ps.sendMessage(ChatColor.WHITE + "Unknown command.");
-
             }
 
         }
