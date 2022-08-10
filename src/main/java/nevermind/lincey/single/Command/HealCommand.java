@@ -20,25 +20,9 @@ public class HealCommand implements CommandExecutor {
         } else {
             Player ps = (Player) sender;
             if (ps.hasPermission("single.heal")) {
-                if (args.length == 0) {
                     ps.setHealth(ps.getMaxHealth());
-                    ps.sendMessage(ChatColor.AQUA + "Healed " + ChatColor.YELLOW  + ps + ChatColor.AQUA  + " .");
+                    ps.sendMessage(ChatColor.AQUA + "Healed " + ChatColor.YELLOW  + ps.getName() + ChatColor.AQUA  + " .");
 
-                } else if (args.length == 1) {
-                    Player pr = Bukkit.getPlayer(args[0]);
-                    boolean po = pr.isOnline();
-                    if(po){
-                        pr.setHealth(ps.getMaxHealth());
-                        ps.sendMessage(ChatColor.AQUA + "Healed " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " .");
-
-                    } else {
-                        ps.sendMessage(ChatColor.AQUA + "Target not found.");
-
-                    }
-                } else {
-                    ps.sendMessage(ChatColor.AQUA + "Usage: /heal [target]" );
-
-                }
             } else {
                 ps.sendMessage(ChatColor.WHITE + "Unknown command.");
 

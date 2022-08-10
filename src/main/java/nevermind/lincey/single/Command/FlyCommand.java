@@ -29,14 +29,10 @@ public class FlyCommand implements CommandExecutor {
                     ps.setAllowFlight(false);
                     ps.sendMessage(ChatColor.AQUA + "Fly-Disabled " + ChatColor.YELLOW  + ps.getName() + ChatColor.AQUA  + " .");
                 }
-
-
             } else {
                 ps.sendMessage(ChatColor.WHITE + "Unknown command.");
             }
-
         }
-
         return true;
     }
 }

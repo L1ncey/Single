@@ -10,7 +10,7 @@ import org.bukkit.ChatColor;
 
 public class SuicideCommand implements CommandExecutor{
         public SuicideCommand(){
-            Bukkit.getPluginCommand("suicide").setExecutor(this);
+            Bukkit.getPluginCommand("zs").setExecutor(this);
         }
 
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {

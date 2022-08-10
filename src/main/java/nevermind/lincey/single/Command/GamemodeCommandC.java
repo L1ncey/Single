@@ -22,31 +22,11 @@ public class GamemodeCommandC implements CommandExecutor{
         } else {
             Player ps = (Player) sender;
             if (ps.hasPermission("single.gm")) {
-                if (args.length == 0) {
                     ps.setGameMode(GameMode.CREATIVE);
-                    ps.sendMessage(ChatColor.AQUA + "Set " + ChatColor.YELLOW  +  ps + ChatColor.AQUA + " Game_mode_CREATIVE .");
-
-                } else if (args.length == 1) {
-                    Player pr = Bukkit.getPlayer(args[0]);
-                    boolean po = pr.isOnline();
-                    if(po){
-                        pr.setGameMode(GameMode.CREATIVE);
-                        ps.sendMessage(ChatColor.AQUA + "Set " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " Game_mode_CREATIVE .");
-
-                    } else {
-                        ps.sendMessage(ChatColor.AQUA + "Target not found.");
-
-                    }
-                } else {
-                    ps.sendMessage(ChatColor.AQUA + "Usage: /gmc [target]");
-
-                }
-
+                    ps.sendMessage(ChatColor.AQUA + "Set " + ChatColor.YELLOW  +  ps.getName() + ChatColor.AQUA + " Game_mode_CREATIVE .");
             } else {
                 ps.sendMessage(ChatColor.WHITE + "Unknown command.");
-
             }
-
         }
         return true;
     }
