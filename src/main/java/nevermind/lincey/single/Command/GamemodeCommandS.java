@@ -22,29 +22,10 @@ public class GamemodeCommandS implements CommandExecutor{
         } else {
             Player ps = (Player) sender;
             if (ps.hasPermission("single.gm")) {
-                if (args.length == 0) {
                     ps.setGameMode(GameMode.SURVIVAL);
-                    ps.sendMessage(ChatColor.AQUA + "Set " + ChatColor.YELLOW  +  ps + ChatColor.AQUA + " Game_mode_SURVIVAL .");
-
-                } else if (args.length == 1) {
-                    Player pr = Bukkit.getPlayer(args[0]);
-                    boolean po = pr.isOnline();
-                    if (po) {
-                        pr.setGameMode(GameMode.SURVIVAL);
-                        ps.sendMessage(ChatColor.AQUA + "Set " + ChatColor.YELLOW  + pr + ChatColor.AQUA  + " Game_mode_SURVIVAL .");
-
-                    } else {
-                        ps.sendMessage(ChatColor.AQUA + "Target not found.");
-
-                    }
-                } else {
-                    ps.sendMessage(ChatColor.AQUA + "Usage: /gmc [target]");
-
-                }
-
+                    ps.sendMessage(ChatColor.AQUA + "Set " + ChatColor.YELLOW  +  ps.getName() + ChatColor.AQUA + " Game_mode_SURVIVAL .");
             } else {
                 ps.sendMessage(ChatColor.WHITE + "Unknown command.");
-
             }
 
         }
