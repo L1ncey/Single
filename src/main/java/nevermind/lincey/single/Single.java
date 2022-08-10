@@ -2,7 +2,6 @@ package nevermind.lincey.single;
 
 
 import nevermind.lincey.single.Command.*;
-
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -24,6 +23,7 @@ public class Single extends JavaPlugin {
         new GamemodeCommandS();
         new HiCommand();
         new FlyCommand();
+        new SuicideCommand();
     }
 
     public void onDisable() {
