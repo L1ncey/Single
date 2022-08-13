@@ -1,0 +1,12 @@
+Unknow_command_message:
+  ####
+  # 当玩家没有指令权限时发送的信息模式
+  # mode default: 检测服务器的spigot.yml下的文件，自动读取服务端默认的未知指令信息
+  # mode custom: 进行自定义信息
+  # custom_message: 自定义信息内容
+  # 注意: 若使用mode default则不会读取custom_message内容
+  #
+  # &为颜色字符
+  ###
+  mode: default
+  custom_message: "&cUnknow command!"

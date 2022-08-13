@@ -1,13 +1,19 @@
 name: Single
 version: ${git.commit.id.abbrev}
-author: Lincey
+author: Lincey/NaerQAQ
 main: nevermind.lincey.single.Single
-
 commands:
   heal:
+    description: Max ealth command
   fheal:
+    description: Max food leavel command
   gmc:
+    description: gamemode 1
   gms:
+    description: gamemode 0
   hi:
+    description: Hi!
   fly:
+    description: Enable/Disable fly command
   zs:
+    description: Suicide command
