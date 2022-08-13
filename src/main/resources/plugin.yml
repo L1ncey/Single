@@ -1,5 +1,5 @@
 name: Single
-version: ${git.commit.id.abbrev}
+version: Alpha 1.0
 author: Lincey/NaerQAQ
 main: nevermind.lincey.single.Single
 commands:
