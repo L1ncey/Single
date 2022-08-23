@@ -22,7 +22,7 @@ public class HealCommand implements CommandExecutor {
             return true;
         }
         ps.setHealth(ps.getMaxHealth());
-        ps.sendMessage(ChatUtils.cu("Healed &e") + ps.getName() + "&b .");
+        ps.sendMessage(ChatUtils.cu("Healed &e" + ps.getName() + "&b ."));
         return true;
     }
 }

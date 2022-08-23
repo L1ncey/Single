@@ -23,7 +23,7 @@ public class FoodHealCommand implements CommandExecutor {
             return true;
         }
         ps.setFoodLevel(20);
-        ps.sendMessage(ChatUtils.cu("Food-Healed &e") + ps.getName() + "&b .");
+        ps.sendMessage(ChatUtils.cu("Food-Healed &e" + ps.getName() + "&b ."));
         return true;
     }
 }
