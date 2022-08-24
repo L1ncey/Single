@@ -23,7 +23,7 @@ public class GamemodeCommandC implements CommandExecutor{
             return true;
         }
         ps.setGameMode(GameMode.CREATIVE);
-        ps.sendMessage(ChatUtils.cu("Set &e" + ps.getName() + "&b Game_mode_CREATIVE."));
+        ps.sendMessage(ChatUtils.cu("Set &e" + ps.getName() + "&b Gamemode_CREATIVE."));
         return true;
     }
 }

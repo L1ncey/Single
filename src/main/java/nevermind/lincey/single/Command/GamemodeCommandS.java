@@ -23,7 +23,7 @@ public class GamemodeCommandS implements CommandExecutor{
             return true;
         }
         ps.setGameMode(GameMode.SURVIVAL);
-        ps.sendMessage(ChatUtils.cu("Set &e" + ps.getName() + "&b Game_mode_SURVIVAL."));
+        ps.sendMessage(ChatUtils.cu("Set &e" + ps.getName() + "&b Gamemode_SURVIVAL."));
         return true;
     }
 }

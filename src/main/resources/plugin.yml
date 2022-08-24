@@ -1,5 +1,5 @@
 name: Single
-version: Alpha 1.0
+version: Alpha 1.1
 author: Lincey/NaerQAQ
 main: nevermind.lincey.single.Single
 commands:
@@ -11,6 +11,8 @@ commands:
     description: gamemode 1
   gms:
     description: gamemode 0
+  gmsp:
+    description: gamemode 3
   hi:
     description: Hi!
   fly:
