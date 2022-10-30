@@ -19,16 +19,16 @@ public class FlyCommand implements CommandExecutor {
         }
         Player ps = (Player) sender;
         if (!ps.hasPermission("single.fly")) {
-            ChatUtils.cuunknow(ps);
+            ChatUtils.CCunknow(ps);
             return true;
         }
         if (!ps.getAllowFlight()) {
             ps.setAllowFlight(true);
-            ps.sendMessage(ChatUtils.cu("&bFly-Enabled &e" + ps.getName() + "&b ."));
+            ps.sendMessage(ChatUtils.CC("&bFly-Enabled &e" + ps.getName() + "&b ."));
             return true;
         }
         ps.setAllowFlight(false);
-        ps.sendMessage(ChatUtils.cu("&bFly-Disabled &e" + ps.getName() + "&b ."));
+        ps.sendMessage(ChatUtils.CC("&bFly-Disabled &e" + ps.getName() + "&b ."));
         return true;
     }
 }

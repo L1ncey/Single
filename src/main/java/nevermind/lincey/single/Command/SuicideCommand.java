@@ -18,7 +18,7 @@ public class SuicideCommand implements CommandExecutor{
         }
         Player ps = (Player) sender;
         ps.setHealth(0);
-        ps.sendMessage(ChatUtils.cu("&bOpps, that must be hurt."));
+        ps.sendMessage(ChatUtils.CC("&bOpps, that must be hurt."));
         return true;
     }
 }

@@ -19,11 +19,11 @@ public class GamemodeCommandS implements CommandExecutor{
         }
         Player ps = (Player) sender;
         if (!ps.hasPermission("single.gm")) {
-            ChatUtils.cuunknow(ps);
+            ChatUtils.CCunknow(ps);
             return true;
         }
         ps.setGameMode(GameMode.SURVIVAL);
-        ps.sendMessage(ChatUtils.cu("Set &e" + ps.getName() + "&b Gamemode_SURVIVAL."));
+        ps.sendMessage(ChatUtils.CC("Set &e" + ps.getName() + "&b Gamemode_SURVIVAL."));
         return true;
     }
 }

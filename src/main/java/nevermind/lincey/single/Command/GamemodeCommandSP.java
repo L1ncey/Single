@@ -21,11 +21,11 @@ public class GamemodeCommandSP implements CommandExecutor{
         }
         Player ps = (Player) sender;
         if (!ps.hasPermission("single.gm")) {
-            ChatUtils.cuunknow(ps);
+            ChatUtils.CCunknow(ps);
             return true;
         }
         ps.setGameMode(GameMode.SPECTATOR);
-        ps.sendMessage(ChatUtils.cu("Set &e" + ps.getName() + "&b Gamemode_SPECTATOR."));
+        ps.sendMessage(ChatUtils.CC("Set &e" + ps.getName() + "&b Gamemode_SPECTATOR."));
         return true;
     }
 }

@@ -19,11 +19,11 @@ public class FoodHealCommand implements CommandExecutor {
         }
         Player ps = (Player) sender;
         if (!ps.hasPermission("single.fheal")) {
-            ChatUtils.cuunknow(ps);
+            ChatUtils.CCunknow(ps);
             return true;
         }
         ps.setFoodLevel(20);
-        ps.sendMessage(ChatUtils.cu("Food-Healed &e" + ps.getName() + "&b ."));
+        ps.sendMessage(ChatUtils.CC("Food-Healed &e" + ps.getName() + "&b ."));
         return true;
     }
 }

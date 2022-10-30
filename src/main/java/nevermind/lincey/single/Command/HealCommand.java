@@ -18,11 +18,11 @@ public class HealCommand implements CommandExecutor {
         }
         Player ps = (Player) sender;
         if (!ps.hasPermission("single.heal")) {
-            ChatUtils.cuunknow(ps);
+            ChatUtils.CCunknow(ps);
             return true;
         }
         ps.setHealth(ps.getMaxHealth());
-        ps.sendMessage(ChatUtils.cu("Healed &e" + ps.getName() + "&b ."));
+        ps.sendMessage(ChatUtils.CC("Healed &e" + ps.getName() + "&b ."));
         return true;
     }
 }

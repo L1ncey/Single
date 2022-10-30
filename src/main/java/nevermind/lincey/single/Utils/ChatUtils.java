@@ -5,10 +5,10 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 public class ChatUtils {
-    public static String cu(String string) {
+    public static String CC(String string) {
         return ChatColor.translateAlternateColorCodes('&', string);
     }
-    public static void cuunknow(Player player) {
+    public static void CCunknow(Player player) {
         player.sendMessage(ChatColor.translateAlternateColorCodes('&', Single.unknowmsg));
     }
 }

@@ -19,11 +19,11 @@ public class GamemodeCommandC implements CommandExecutor{
         }
         Player ps = (Player) sender;
         if (!ps.hasPermission("single.gm")) {
-            ChatUtils.cuunknow(ps);
+            ChatUtils.CCunknow(ps);
             return true;
         }
         ps.setGameMode(GameMode.CREATIVE);
-        ps.sendMessage(ChatUtils.cu("Set &e" + ps.getName() + "&b Gamemode_CREATIVE."));
+        ps.sendMessage(ChatUtils.CC("Set &e" + ps.getName() + "&b Gamemode_CREATIVE."));
         return true;
     }
 }
